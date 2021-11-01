@@ -1,15 +1,17 @@
 package com.np.bucketmanager.blockstore;
 
-public class StoreObj implements Storable<Duns, String, String> {
-    private final Duns d;
+import com.np.bucketmanager.models.Marble;
 
-    public StoreObj(Duns duns) {
-        d = duns;
+public class StoreObj implements Storable<Marble, String, String> {
+    private final Marble d;
+
+    public StoreObj(Marble marble) {
+        d = marble;
     }
 
     public static StoreObj fromString(String str) {
         String[] fields = str.split("\\|");
-        Duns d = new Duns();
+        Marble d = new Marble();
         d.setLoc(fields[0]);
         d.setName(fields[1]);
         d.setZip(fields[2]);

@@ -1,6 +1,7 @@
 package com.np.bucketmanager;
 
 import com.np.bucketmanager.blockstore.*;
+import com.np.bucketmanager.models.Marble;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -52,8 +53,8 @@ class BlockstoreTests {
 		System.out.println(FileStore.counter);
 	}
 
-	Duns random() {
-		Duns d = new Duns();
+	Marble random() {
+		Marble d = new Marble();
 		Random rand = new Random();
 		d.setLoc(padLeft(String.valueOf(rand.nextInt(1000000000)), 9));
 		rand = new Random();

@@ -1,6 +1,6 @@
-package com.np.bucketmanager.blockstore;
+package com.np.bucketmanager.models;
 
-public class Duns {
+public class Marble {
     private String loc;
     private String name;
     private String zip;
