@@ -14,5 +14,8 @@ public interface ScatterGatherer {
     }
 
     interface Gatherer {
+        boolean needMore();
+
+        void gatherResult(Marble marble);
     }
 }
