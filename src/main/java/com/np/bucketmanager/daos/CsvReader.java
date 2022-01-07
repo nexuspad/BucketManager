@@ -29,4 +29,8 @@ public class CsvReader<T> {
             e.printStackTrace();
         }
     }
+
+    public Stream<T> getDataStream() {
+        return dataStream;
+    }
 }

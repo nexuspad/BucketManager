@@ -1,4 +1,5 @@
 package com.np.bucketmanager.blockstore;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
@@ -88,6 +89,10 @@ public class FileStore extends BlockStore<StoreObj, String> {
             flush(block);
         });
         blockLocks.clear();
+    }
+
+    public List<String> indexes() {
+        return null;
     }
 
     @Override

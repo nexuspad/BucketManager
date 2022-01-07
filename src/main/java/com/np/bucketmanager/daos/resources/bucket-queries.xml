@@ -1,0 +1,5 @@
+<named-queries>
+    <query name="test"><![CDATA[
+    select * from dual;
+    ]]></query>
+</named-queries>

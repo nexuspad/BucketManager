@@ -3,10 +3,10 @@ package com.np.bucketmanager.blockstore;
 import com.np.bucketmanager.models.Marble;
 
 public class StoreObj implements Storable<Marble, String, String> {
-    private final Marble d;
+    private final Marble marble;
 
     public StoreObj(Marble marble) {
-        d = marble;
+        this.marble = marble;
     }
 
     public static StoreObj fromString(String str) {
@@ -24,18 +24,22 @@ public class StoreObj implements Storable<Marble, String, String> {
 
     @Override
     public String index() {
-        return d.getZip();
+        return marble.getZip();
     }
 
     @Override
     public String block() {
-        return indexToBlock(d.getZip());
+        return indexToBlock(marble.getZip());
     }
 
     @Override
     public String serialize() {
         StringBuilder sb = new StringBuilder();
-        sb.append(d.getLoc()).append("|").append(d.getName()).append("|").append(d.getZip());
+        sb.append(marble.getLoc()).append("|").append(marble.getName()).append("|").append(marble.getZip());
         return sb.toString();
+    }
+
+    public Marble getMarble() {
+        return marble;
     }
 }
